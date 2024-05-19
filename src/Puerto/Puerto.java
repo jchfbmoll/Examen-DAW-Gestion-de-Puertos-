@@ -20,10 +20,7 @@ public class Puerto {
             for (Pantalan pantalan: listPantalan){
                 if (barco.encajaTipo(pantalan ) && !barcometido){
                     for(Amarre amarre: pantalan.getListAmarre()){
-                        System.out.println(barco.encajaTamano(amarre));
-
                         if (!amarre.getOcupado() && barco.encajaTamano(amarre)>=0.0f){
-
                             amarre.setOcupado(true);
                             amarre.setBarco(barco);
                             barcosEntrantes.remove(i);
@@ -39,21 +36,17 @@ public class Puerto {
             }
 
         }
-//        for(Pantalan pantalan: listPantalan){
-//            for(Amarre amarre: pantalan.getListAmarre()){
-//                if (amarre.getOcupado()){
-//                    barcosEntrantes.remove();
-//                }
-//            }
-//        }
+
     }
     public static void verAmarre(ArrayList<Pantalan> listPantalan){
         for(Pantalan pantalan: listPantalan){
             String strPantalan = pantalan.toString();
+            System.out.println(strPantalan);
             for(Amarre amarre: pantalan.getListAmarre()){
                 String strAmarre = amarre.toString();
-                System.out.println(strPantalan+strAmarre);
+                System.out.println("\n[\n"+strAmarre+"\n]");
             }
+            System.out.println("]");
         }
     }
     public static void simular(ArrayList<Pantalan> listPantalan){

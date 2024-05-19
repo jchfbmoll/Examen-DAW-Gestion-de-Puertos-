@@ -28,4 +28,8 @@ public class Pantalan {
     public void addAmarre(Amarre amarre){
         listAmarre.add(amarre);
     }
+    @Override
+    public String toString(){
+        return "Pantalán[id="+ID+", tipo="+tipo;
+    }
 }
